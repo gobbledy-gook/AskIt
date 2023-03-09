@@ -21,7 +21,7 @@
     },
     "default_popup": "index.html"
   },
-  "permissions": ["scripting", "activeTab"],
+  "permissions": ["scripting", "activeTab", "http://127.0.0.1:5000/*"],
   "commands": {
     "_execute_action": {
       "suggested_key": {
