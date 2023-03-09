@@ -5,19 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href = "./index.css" rel = "stylesheet">
     <style>
-        body{
-            min-width:330px; 
+
+        .page{
+            min-width:300px;
+        }
+
+        .head{
+            border-bottom: 1px solid #979797b4;
+        }
+
+        #textarea{
+            border-radius: 0.5rem;
+        }
+
+        button{
+            border-radius: 0.5rem;
         }
     </style>
 </head>
-<body>
-    <div class = "container">
-        <div class = "head flex flex-col justify-center">
-            <h1 class  = "border-gray-600 bg-gray-600">HackPage</h1>
-            <h5>Lets sneak peak through this page</h5>
+
+<body class = "bg-slate-800 page">
+    <div>
+        <div class = "head flex flex-col justify-center text-center text-white font-mono">
+            <h1 class ="text-2xl pt-3 pb-1">Ask It</h1>
+            <h5 class = "pb-2">Instant QnA</h5>
+        </div>
+        <div>
+            <form class = "flex flex-col justify-center">
+                <div id = "textarea" class ="bg-slate-200 p-2 m-3 h-24 text-gray-700" contenteditable>   
+                </div>
+                <button id = "submit" class = "bg-green-400 px-2 py-1 mx-3 mb-3 hover:bg-green-600 font-mono text-sm" type = "submit">AskIt</button>
+            </form>
         </div>
     </div>
 
+    <script src = "asking.js"></script>    
 </body>
+
 </html>
