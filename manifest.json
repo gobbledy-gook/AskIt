@@ -21,7 +21,14 @@
     },
     "default_popup": "index.html"
   },
-  "permissions": ["scripting", "activeTab", "http://127.0.0.1:5000/*"],
+  "host_permissions":[
+    "http://127.0.0.1:5000/*"
+  ],
+  "permissions": ["scripting", 
+  "activeTab",
+  "background",
+  "tabs"
+],
   "commands": {
     "_execute_action": {
       "suggested_key": {
@@ -29,5 +36,16 @@
         "mac": "Command+B"
       }
     }
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*/*",
+        "http://*/*"
+      ],
+      "js":[
+        "popup.js"
+      ]
+    }
+  ]
 }
